@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.svg" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content="Транскрипция армянского аудио с использованием AI технологий. Загружайте аудиофайлы и получайте точную расшифровку на армянском языке." />
+    <meta name="keywords" content="транскрипция, армянский язык, аудио, AI, Whisper, речь в текст" />
+    <meta name="author" content="Armenian Transcription App" />
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Армянская транскрипция аудио" />
+    <meta property="og:description" content="Преобразование армянского аудио в текст с помощью AI" />
+    <meta property="og:type" content="website" />
+
+    <!-- Подключение шрифтов для армянского текста -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Armenian:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'armenian': ['Noto Sans Armenian', 'Arial Unicode MS', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <title>Армянская транскрипция аудио</title>
+</head>
+<body>
+<noscript>Вам необходимо включить JavaScript для работы этого приложения.</noscript>
+<div id="root"></div>
+
+<!-- Предзагрузка важных ресурсов -->
+<script>
+    // Предзагрузка шрифтов
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.href = 'https://fonts.gstatic.com/s/notosansarmenian/v2/MwQRbgPJLKmr9mKAd3s1GYAAGz1wFjl7.woff2';
+    link.as = 'font';
+    link.type = 'font/woff2';
+    link.crossOrigin = 'anonymous';
+    document.head.appendChild(link);
+</script>
+</body>
+</html>
